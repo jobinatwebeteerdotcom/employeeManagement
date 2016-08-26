@@ -6,9 +6,11 @@
  .sec1 h4{
 	float:left;
 	 color:blue;
+	 margin-top: 56px;
  }
-  .sec1 img{
+  .sec2{
+	    padding-left: 0px;
+	    margin-left: -13px;
 	 
-  }
-  .option1{
-  }
+	  }
+ 
