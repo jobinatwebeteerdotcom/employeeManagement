@@ -4,14 +4,31 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Untitled Document</title>
 <link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css" />
 <script src="js/bootstrap.min.js"></script>
 </head>
 
 <body>
-<?php
-echo "helo world";
-echo "shija";
-?>
+<!--start section1-->
+<div class="container-fluid sec1">
+<div class="container sec1_head">
+<div class="col-md-12">
+<div class="col-md-6">
+</div>
+<div class="col-md-6">
 
+
+<h4>Welcome shija</h4>
+<img src="images/pic1.png" />
+<select class="option1">
+<option value="null"></option>
+<option value="logout">logout</option>
+<option value="settings">settings</option>
+</select>
+</div>
+</div>
+</div>
+</div>
+<!--end section1-->
 </body>
 </html>
