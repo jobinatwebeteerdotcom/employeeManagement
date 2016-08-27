@@ -53,9 +53,9 @@
 <div class="col-md-9">
 <?php
 $con=open_connection();
-$sql=select* fromtbl_employees;
+$sql="select * from tbl_employees";
 $result=mysqli_query($con,$sql);
-$row=mysqli_fetch_Array();
+$row=mysqli_fetch_Array($result);
 
 ?>
 <table border="3">
@@ -85,7 +85,7 @@ while($row)
 <td><?php echo $row['password'];?></td>
 <td><?php echo $row['status'];?></td>
 <?php
-$row=mysqli_fetchArray();
+$row=mysqli_fetch_Array();
 ?>
 
 
