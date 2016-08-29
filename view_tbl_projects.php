@@ -40,15 +40,16 @@
 <ul class="nav navbar-nav nav_home">
         <li class="active"><a href="#">Home</a></li>
         <br />
-        <li><a href="#">COMAPNY PROFILE</a></li>
-        <li><a href="#">PRODUCT LIST</a></li>
-        <li><a href="#">CURRENT INVENTORY</a></li>
-        <li><a href="#">INTERNATIONAL SOURCING</a></li>
-        <li><a href="#">LOGISTICS</a></li>
-        <li><a href="#">CONTACT</a></li>
-        <li><a href="#">EMPLOYMENT OPPORTUNITIES</a></li>
-      </ul>
-   
+        <li><a href="#">EMPLOYEES</a></li>
+        <li><a href="#">DEPARTMENT</a></li>
+        <li><a href="#">SALARY</a></li>
+        <li><a href="#">LEAVES</a></li>
+        <li><a href="#">CLIENTS</a></li>
+        <li><a href="#">PROJECTS</a></li>
+         <li><a href="#">ADMIN</a></li>
+        <li><a href="#">TEAMS</a></li>
+         <li><a href="#">TEAM MEMBERS</a></li>
+          <li><a href="#">WORKS</a></li>   
 </nav>
 </div>
 

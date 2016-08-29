@@ -1,26 +1,26 @@
 @charset "utf-8";
-.sec1{
-	 background:#CCC;
+ .sec1{
+	 background:#69F;
  }
  .sec1 h4{
 	float:left;
-	 color:blue;
+	 color:#CCC;
 	 margin-top: 56px;
  }
   .sec2{
 	    padding-left: 0px;
 	    margin-left: -13px;
+		background:#CCC;
 	 
 	  }
-	  .team.members {
-    color: red;
-    margin-bottom: 17px;
-    padding: 16px;
-    font-size: 28px;
-}
-.team {
-    color: red;
-    margin-bottom: 17px;
-    padding: 16px;
-    font-size: 28px;
+	  .sec2 h1{
+		  text-align:center;
+		  color:#C03;
+	  }
+  .sec2 tabl1{
+	  
+  }
+ .sec2 li {
+    padding: 6px;
+	margin-bottom: -23px;
 }

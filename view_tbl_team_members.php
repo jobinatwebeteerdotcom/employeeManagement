@@ -35,24 +35,27 @@
 <!--end section1-->
 <!--start section2-->
 <div class="container-fluid sec2">
-<div class="col-md-3">
+<div class="col-md-2">
 <nav class="navbar navbar-default">
 <ul class="nav navbar-nav nav_home">
         <li class="active"><a href="#">Home</a></li>
         <br />
-        <li><a href="#">COMAPNY PROFILE</a></li>
-        <li><a href="#">PRODUCT LIST</a></li>
-        <li><a href="#">CURRENT INVENTORY</a></li>
-        <li><a href="#">INTERNATIONAL SOURCING</a></li>
-        <li><a href="#">LOGISTICS</a></li>
-        <li><a href="#">CONTACT</a></li>
-        <li><a href="#">EMPLOYMENT OPPORTUNITIES</a></li>
+        <li><a href="#">EMPLOYEES</a></li>
+        <li><a href="#">DEPARTMENT</a></li>
+        <li><a href="#">SALARY</a></li>
+        <li><a href="#">LEAVES</a></li>
+        <li><a href="#">CLIENTS</a></li>
+        <li><a href="#">PROJECTS</a></li>
+         <li><a href="#">ADMIN</a></li>
+        <li><a href="#">TEAMS</a></li>
+         <li><a href="#">TEAM MEMBERS</a></li>
+          <li><a href="#">WORKS</a></li>
       </ul>
    
 </nav>
 </div>
 
-<div class="col-md-9">
+<div class="col-md-10">
 <?php
 $con=open_connection();
 /*$sql="select * from tbl_projects"*/
@@ -65,11 +68,9 @@ inner join tbl_employees
 $result=mysqli_query($con,$sql1);
 
 ?>
-<div class="team members">
 
-TEAM MEMBERS
-</div>
-<table border="3" class="table-bordered">
+
+<table border="3" class="table-border">
         
 <tr>
 <th>Id</th>

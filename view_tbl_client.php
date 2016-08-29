@@ -12,15 +12,16 @@
 
 <script src="js/bootstrap.min.js"></script>
 </head>
+
 <body>
+<!--start section1-->
 <div class="container-fluid sec1">
 <div class="container sec1_head">
-
 <div class="col-md-12">
 <div class="col-md-7">
 </div>
 <div class="col-md-5">
-<h4>Welcome Nimi</h4>
+<h4>Welcome NIMI</h4>
 <img src="images/pic1.png" />
 <select class="option1">
 <option value="null"></option>
@@ -29,7 +30,7 @@
 </select>
 </div>
 </div>
-</div>
+
 </div>
 </div>
 <!--end section1-->
@@ -49,7 +50,8 @@
          <li><a href="#">ADMIN</a></li>
         <li><a href="#">TEAMS</a></li>
          <li><a href="#">TEAM MEMBERS</a></li>
-          <li><a href="#">WORKS</a></li>
+          <li><a href="#">WORKS</a></li>       
+      
       </ul>
    
 </nav>
@@ -58,33 +60,28 @@
 <div class="col-md-10">
 <?php
 $con=open_connection();
-/*$sql="select * from tbl_projects"*/
-$sql1="SELECT tbl_team.id,  tbl_employees.name,tbl_team.team_name,tbl_team.status
-FROM tbl_employees
-INNER JOIN tbl_team ON tbl_team.TL_id = tbl_employees.id";
-$result=mysqli_query($con,$sql1);
+$sql="SELECT * 
+FROM  `tbl_clients`";
+$result=mysqli_query($con,$sql);
 
 ?>
-<div class="team">
-    TEAM
-</div>
-<table border="5" class="table-bordered">
+<table border="3" class="table-border">
 <tr>
-
 <th>Id</th>
-<th>name</th>
-<th>team name</th>
-<th>Status</th>
+<th>Client name</th>
+<th>Email</th>
+<th>Phone</th>
+<th>Address</th>
 </tr>
 <?php
 while($row=mysqli_fetch_Array($result))
 {?>
 <tr>
 <td><?php echo $row['id'];?></td>
-<td><?php echo $row['name'];?></td>
-<td><?php echo $row['team_name'];?></td>
-<td><?php echo $row['status'];?></td>
-
+<td><?php echo $row['client_name'];?></td>
+<td><?php echo $row['email'];?></td>
+<td><?php echo $row['phone'];?></td>
+<td><?php echo $row['address'];?></td>
 </tr>
 <?php
 }
