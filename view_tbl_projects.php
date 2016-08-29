@@ -64,7 +64,7 @@ ON tbl_clients.id = tbl_projects.client_id";
 $result=mysqli_query($con,$sql1);
 
 ?>
-<table border="3" class="table-bordered">
+<table border="3" class="table-border">
 <tr>
 
 <th>Id</th>

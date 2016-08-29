@@ -68,7 +68,7 @@ $result=mysqli_query($con,$sql1);
 <div class="team">
     TEAM
 </div>
-<table border="5" class="table-bordered">
+<table border="5" class="table-border">
 <tr>
 
 <th>Id</th>
