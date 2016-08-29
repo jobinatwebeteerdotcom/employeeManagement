@@ -40,31 +40,29 @@ include('config/config.php');
 <div class="col-md-2">
 <nav class="navbar navbar-default">
 <ul class="nav navbar-nav nav_home">
-        <li class="active"><a href="#">Home</a></li>
+       <li class="active"><a href="#">Home</a></li>
         <br />
-        <li><a href="#">EMPLOYEES</a></li>
-        <li><a href="#">DEPARTMENT</a></li>
-        <li><a href="#">SALARY</a></li>
-        <li><a href="#">LEAVES</a></li>
-        <li><a href="#">CLIENTS</a></li>
-        <li><a href="#">PROJECTS</a></li>
-         <li><a href="#">ADMIN</a></li>
-        <li><a href="#">TEAMS</a></li>
-         <li><a href="#">TEAM MEMBERS</a></li>
-          <li><a href="#">WORKS</a></li>
-      </ul>
-   
+       <li><a href="index.php">EMPLOYEES</a></li>
+        <li><a href="view_department.php">DEPARTMENT</a></li>
+        <li><a href="view_salary.php">SALARY</a></li>
+        <li><a href="view_leaves.php">LEAVES</a></li>
+        <li><a href="view_tbl_client.php">CLIENTS</a></li>
+        <li><a href="view_tbl_projects.php">PROJECTS</a></li>
+         <li><a href="view_admin.php">ADMIN</a></li>
+        <li><a href="view_tbl_team.php">TEAMS</a></li>
+         <li><a href="view_tbl_team_members.php">TEAM MEMBERS</a></li>
+          <li><a href="view_works.php">WORKS</a></li>
+      </ul>   
 </nav>
 </div>
 
 <div class="col-md-10">
 <?php
 $con=open_connection();
-<<<<<<< HEAD
-$sql="SELECT tbl_works.id, A.name as byname,B.name as toname, tbl_projects.project_name, tbl_works.description, tbl_works.add_on, tbl_works.deadline, tbl_works.status, tbl_works.remarks
-=======
-$sql="SELECT tbl_works.id, A.name,B.name, tbl_projects.project_name, tbl_works.description, tbl_works.add_on, tbl_works.deadline, tbl_works.status, tbl_works.remarks
->>>>>>> 52d786090397035b53804060cf2ca3823d82b522
+
+$sql="SELECT tbl_works.id, A.name as byname,B.name as toname, 
+tbl_projects.project_name, tbl_works.description, tbl_works.add_on, tbl_works.deadline, tbl_works.status,
+ tbl_works.remarks
 FROM tbl_works
 INNER JOIN tbl_employees A ON tbl_works.assigned_by = A.id
 INNER JOIN tbl_employees B ON tbl_works.assigned_to = B.id 

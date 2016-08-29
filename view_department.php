@@ -46,11 +46,11 @@ include('config/config.php');
         <li><a href="view_department.php">DEPARTMENT</a></li>
         <li><a href="view_salary.php">SALARY</a></li>
         <li><a href="view_leaves.php">LEAVES</a></li>
-        <li><a href="#">CLIENTS</a></li>
-        <li><a href="#">PROJECTS</a></li>
-         <li><a href="#">ADMIN</a></li>
-        <li><a href="#">TEAMS</a></li>
-         <li><a href="#">TEAM MEMBERS</a></li>
+        <li><a href="view_tbl_client.php">CLIENTS</a></li>
+        <li><a href="view_tbl_projects.php">PROJECTS</a></li>
+         <li><a href="view_admin.php">ADMIN</a></li>
+        <li><a href="view_tbl_team.php">TEAMS</a></li>
+         <li><a href="view_tbl_team_members.php">TEAM MEMBERS</a></li>
           <li><a href="view_works.php">WORKS</a></li>
       </ul>
    
