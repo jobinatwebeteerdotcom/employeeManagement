@@ -69,7 +69,7 @@ $result=mysqli_query($con,$sql);
 
 ?>
 <div class="col-md-5">
-<h1>salary details</h1>
+<h1>SALARY</h1>
 <table  class="tabl1" border="3">
 <tr>
 <th>id</th>

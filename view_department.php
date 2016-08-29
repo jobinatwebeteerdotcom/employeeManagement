@@ -60,7 +60,7 @@ include('config/config.php');
 <div class="col-md-10">
 <div class="col-md-3">
 </div>
-<div class="col-md-6">
+<div class="col-md-4">
 
 <?php
 $con=open_connection();
@@ -69,7 +69,7 @@ $result=mysqli_query($con,$sql);
 
 
 ?>
-<h1>departments details</h1>
+<h1>DEPARTMENT </h1>
 <table  class="tabl1" border="3">
 <tr>
 <th>id</th>
@@ -97,7 +97,7 @@ while($row=mysqli_fetch_Array($result))
 
 
 </div>
-<div class="col-md-6">
+<div class="col-md-3">
 </div>
 <!--end section2-->
 

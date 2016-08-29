@@ -71,7 +71,11 @@ $result=mysqli_query($con,$sql);
 
 
 ?>
-<h1>works details</h1>
+<div class="col-md-2">
+</div>
+<div class="col-md-6">
+
+<h1>WORKS</h1>
 <table  class="tabl1" border="3">
 <tr>
 <th>id</th>
@@ -107,8 +111,10 @@ while($row=mysqli_fetch_Array($result))
 
 </table>
 </div>
+</div>
 
-
+<div class="col-md-2">
+</div>
 </div>
 <!--end section2-->
 

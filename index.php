@@ -57,6 +57,8 @@ include('config/config.php');
 </div>
 
 <div class="col-md-10">
+<div class="col-md-3">
+</div>
 <?php
 $con=open_connection();
 $sql="SELECT tbl_employees.id, tbl_employees.name, tbl_employees.email, tbl_employees.phone, tbl_employees.address, tbl_employees.qualification, tbl_departments.department, tbl_employees.password, tbl_employees.status
@@ -66,7 +68,9 @@ $result=mysqli_query($con,$sql);
 
 
 ?>
-<h1>employee details</h1>
+<div class="col-md-5">
+
+<h1>EMPLOYEES</h1>
 <table  class="tabl1" border="3">
 <tr>
 <th>id</th>
@@ -101,6 +105,9 @@ while($row=mysqli_fetch_Array($result))
 <?php }?>
 
 </table>
+</div>
+<div class="col-md-2">
+</div>
 </div>
 
 

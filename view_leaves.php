@@ -65,7 +65,7 @@ $result=mysqli_query($con,$sql);
 ?>
 <div class="col-md-5">
 
-<h1>leaves details</h1>
+<h1>LEAVES</h1>
 
 <table border=3>
 <tr>
