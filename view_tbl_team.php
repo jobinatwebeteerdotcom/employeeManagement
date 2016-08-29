@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Untitled Document</title>
 <link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/nimistyle.css" />
+<link rel="stylesheet" href="css/style.css" />
 
 
 <script src="js/bootstrap.min.js"></script>

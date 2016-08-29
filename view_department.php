@@ -37,24 +37,31 @@ include('config/config.php');
 <!--end section1-->
 <!--start section2-->
 <div class="container-fluid sec2">
-<div class="col-md-3">
+<div class="col-md-2">
 <nav class="navbar navbar-default">
 <ul class="nav navbar-nav nav_home">
         <li class="active"><a href="#">Home</a></li>
         <br />
-        <li><a href="#">COMAPNY PROFILE</a></li>
-        <li><a href="#">PRODUCT LIST</a></li>
-        <li><a href="#">CURRENT INVENTORY</a></li>
-        <li><a href="#">INTERNATIONAL SOURCING</a></li>
-        <li><a href="#">LOGISTICS</a></li>
-        <li><a href="#">CONTACT</a></li>
-        <li><a href="#">EMPLOYMENT OPPORTUNITIES</a></li>
+       <li><a href="index.php">EMPLOYEES</a></li>
+        <li><a href="view_department.php">DEPARTMENT</a></li>
+        <li><a href="view_salary.php">SALARY</a></li>
+        <li><a href="view_leaves.php">LEAVES</a></li>
+        <li><a href="#">CLIENTS</a></li>
+        <li><a href="#">PROJECTS</a></li>
+         <li><a href="#">ADMIN</a></li>
+        <li><a href="#">TEAMS</a></li>
+         <li><a href="#">TEAM MEMBERS</a></li>
+          <li><a href="view_works.php">WORKS</a></li>
       </ul>
    
 </nav>
 </div>
 
-<div class="col-md-9">
+<div class="col-md-10">
+<div class="col-md-3">
+</div>
+<div class="col-md-6">
+
 <?php
 $con=open_connection();
 $sql="select * from tbl_departments";
@@ -86,8 +93,11 @@ while($row=mysqli_fetch_Array($result))
 
 </table>
 </div>
+</div>
 
 
+</div>
+<div class="col-md-6">
 </div>
 <!--end section2-->
 

@@ -1,22 +1,27 @@
 @charset "utf-8";
 /* CSS Document */
  .sec1{
-	 background:#CCC;
+	 background:#69F;
  }
  .sec1 h4{
 	float:left;
-	 color:blue;
+	 color:#CCC;
 	 margin-top: 56px;
  }
   .sec2{
 	    padding-left: 0px;
 	    margin-left: -13px;
+		background:#CCC;
 	 
 	  }
 	  .sec2 h1{
 		  text-align:center;
-		  color:#C00;
+		  color:#C03;
 	  }
   .sec2 tabl1{
 	  
   }
+ .sec2 li {
+    padding: 6px;
+	margin-bottom: -23px;
+}

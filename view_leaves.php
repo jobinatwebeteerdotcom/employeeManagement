@@ -33,24 +33,29 @@ include('config/config.php');
 <!--end section1-->
 <!--start section2-->
 <div class="container-fluid sec2">
-<div class="col-md-3">
+<div class="col-md-2">
 <nav class="navbar navbar-default">
 <ul class="nav navbar-nav nav_home">
         <li class="active"><a href="#">Home</a></li>
         <br />
-        <li><a href="#">COMAPNY PROFILE</a></li>
-        <li><a href="#">PRODUCT LIST</a></li>
-        <li><a href="#">CURRENT INVENTORY</a></li>
-        <li><a href="#">INTERNATIONAL SOURCING</a></li>
-        <li><a href="#">LOGISTICS</a></li>
-        <li><a href="#">CONTACT</a></li>
-        <li><a href="#">EMPLOYMENT OPPORTUNITIES</a></li>
+        <li><a href="#">EMPLOYEES</a></li>
+        <li><a href="#">DEPARTMENT</a></li>
+        <li><a href="#">SALARY</a></li>
+        <li><a href="#">LEAVES</a></li>
+        <li><a href="#">CLIENTS</a></li>
+        <li><a href="#">PROJECTS</a></li>
+         <li><a href="#">ADMIN</a></li>
+        <li><a href="#">TEAMS</a></li>
+         <li><a href="#">TEAM MEMBERS</a></li>
+          <li><a href="#">WORKS</a></li>
       </ul>
    
 </nav>
 </div>
 
-<div class="col-md-9">
+<div class="col-md-10">
+<div class="col-md-3">
+</div>
 <?php
 $con=open_connection();
 $sql="SELECT tbl_leaves.id, tbl_employees.name, tbl_leaves.leave_date, tbl_leaves.reson, tbl_leaves.status
@@ -58,6 +63,8 @@ FROM tbl_leaves
 INNER JOIN tbl_employees ON tbl_leaves.employee_id = tbl_employees.id";
 $result=mysqli_query($con,$sql);
 ?>
+<div class="col-md-5">
+
 <h1>leaves details</h1>
 
 <table border=3>
@@ -99,6 +106,9 @@ else if( $row['status']==-1)
 
 <?php }?>
 </table>
+</div>
+<div class="col-md-1">
+</div>
 </div>
 
 

@@ -36,24 +36,27 @@ include('config/config.php');
 <!--end section1-->
 <!--start section2-->
 <div class="container-fluid sec2">
-<div class="col-md-3">
+<div class="col-md-2">
 <nav class="navbar navbar-default">
 <ul class="nav navbar-nav nav_home">
         <li class="active"><a href="#">Home</a></li>
         <br />
-        <li><a href="#">COMAPNY PROFILE</a></li>
-        <li><a href="#">PRODUCT LIST</a></li>
-        <li><a href="#">CURRENT INVENTORY</a></li>
-        <li><a href="#">INTERNATIONAL SOURCING</a></li>
-        <li><a href="#">LOGISTICS</a></li>
-        <li><a href="#">CONTACT</a></li>
-        <li><a href="#">EMPLOYMENT OPPORTUNITIES</a></li>
+        <li><a href="#">EMPLOYEES</a></li>
+        <li><a href="#">DEPARTMENT</a></li>
+        <li><a href="#">SALARY</a></li>
+        <li><a href="#">LEAVES</a></li>
+        <li><a href="#">CLIENTS</a></li>
+        <li><a href="#">PROJECTS</a></li>
+         <li><a href="#">ADMIN</a></li>
+        <li><a href="#">TEAMS</a></li>
+         <li><a href="#">TEAM MEMBERS</a></li>
+          <li><a href="#">WORKS</a></li>
       </ul>
    
 </nav>
 </div>
 
-<div class="col-md-9">
+<div class="col-md-10">
 <?php
 $con=open_connection();
 $sql="SELECT tbl_employees.id, tbl_employees.name, tbl_employees.email, tbl_employees.phone, tbl_employees.address, tbl_employees.qualification, tbl_departments.department, tbl_employees.password, tbl_employees.status
