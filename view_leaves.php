@@ -4,15 +4,12 @@ include('config/config.php');
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Untitled Document</title>
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/style.css" />
-
-
 <script src="js/bootstrap.min.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
 </head>
-
 <body>
 <!--start section1-->
 <div class="container-fluid sec1">
@@ -56,56 +53,57 @@ include('config/config.php');
 <div class="col-md-9">
 <?php
 $con=open_connection();
-$sql="SELECT tbl_employees.id, tbl_employees.name, tbl_employees.email, tbl_employees.phone, tbl_employees.address, tbl_employees.qualification, tbl_departments.department, tbl_employees.password, tbl_employees.status
-FROM tbl_employees
-INNER JOIN tbl_departments ON tbl_employees.department_id = tbl_departments.id ";
+$sql="SELECT tbl_leaves.id, tbl_employees.name, tbl_leaves.leave_date, tbl_leaves.reson, tbl_leaves.status
+FROM tbl_leaves
+INNER JOIN tbl_employees ON tbl_leaves.employee_id = tbl_employees.id";
 $result=mysqli_query($con,$sql);
-
-
 ?>
-<h1>employee details</h1>
-<table  class="tabl1" border="3">
+<h1>leaves details</h1>
+
+<table border=3>
 <tr>
 <th>id</th>
-<th>name</th>
-<th>email</th>
-<th>phone</th>
-<th>address</th>
-<th>qualification</th>
-<th>department_id</th>
-<th>password</th>
+<th>employee_id</th>
+<th>leave_date</th>
+<th>reson</th>
 <th>status</th>
 </tr>
-
 <?php
 while($row=mysqli_fetch_Array($result))
 {?>
 <tr>
-<td><?php echo $row['id'];?></td>
-<td><?php echo $row['name'];?></td>
-<td><?php echo $row['email'];?></td>
-<td><?php echo $row['phone'];?></td>
-<td><?php echo $row['address'];?></td>
-<td><?php echo $row['qualification'];?></td>
-<td><?php echo $row['department'];?></td>
-<td><?php echo $row['password'];?></td>
-<td><?php echo $row['status'];?></td>
-</tr>
+<td><?php echo $row['id']?></td>
+<td><?php echo $row['name']?></td>
+<td><?php echo $row['leave_date']?></td>
+<td><?php echo $row['reson']?></td>
+<?php
+if( $row['status']==1)
+{?>
+<td><?php echo 'aproved'?></td>
+<?php }
+ 
+else if( $row['status']==0)
 
+{?>
+<td><?php echo 'pending'?></td>
 
+<?php }
+else if( $row['status']==-1)
 
+{?>
+<td><?php echo 'reject'?></td>
 
 <?php }?>
 
+</tr>
+
+<?php }?>
 </table>
 </div>
 
 
 </div>
 <!--end section2-->
-
-
-
 
 
 </body>

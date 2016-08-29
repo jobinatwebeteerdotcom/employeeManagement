@@ -11,6 +11,7 @@ include('config/config.php');
 
 
 <script src="js/bootstrap.min.js"></script>
+
 </head>
 
 <body>
@@ -56,25 +57,26 @@ include('config/config.php');
 <div class="col-md-9">
 <?php
 $con=open_connection();
-$sql="SELECT tbl_employees.id, tbl_employees.name, tbl_employees.email, tbl_employees.phone, tbl_employees.address, tbl_employees.qualification, tbl_departments.department, tbl_employees.password, tbl_employees.status
-FROM tbl_employees
-INNER JOIN tbl_departments ON tbl_employees.department_id = tbl_departments.id ";
+$sql="SELECT tbl_works.id, tbl_employees.name, tbl_employees.name, tbl_projects.project_name, tbl_works.description, tbl_works.add_on, tbl_works.deadline, tbl_works.status, tbl_works.remarks
+FROM tbl_works
+INNER JOIN tbl_employees ON tbl_works.assigned_by = tbl_employees.id 
+INNER JOIN tbl_projects ON tbl_works.project_id = tbl_projects.id ";
 $result=mysqli_query($con,$sql);
 
 
 ?>
-<h1>employee details</h1>
+<h1>works details</h1>
 <table  class="tabl1" border="3">
 <tr>
 <th>id</th>
-<th>name</th>
-<th>email</th>
-<th>phone</th>
-<th>address</th>
-<th>qualification</th>
-<th>department_id</th>
-<th>password</th>
+<th>assigned_by</th>
+<th>assigned_to</th>
+<th>project_id</th>
+<th>description</th>
+<th>add_on</th>
+<th>deadline</th>
 <th>status</th>
+<th>remarks</th>
 </tr>
 
 <?php
@@ -83,13 +85,13 @@ while($row=mysqli_fetch_Array($result))
 <tr>
 <td><?php echo $row['id'];?></td>
 <td><?php echo $row['name'];?></td>
-<td><?php echo $row['email'];?></td>
-<td><?php echo $row['phone'];?></td>
-<td><?php echo $row['address'];?></td>
-<td><?php echo $row['qualification'];?></td>
-<td><?php echo $row['department'];?></td>
-<td><?php echo $row['password'];?></td>
+<td><?php echo $row['name'];?></td>
+<td><?php echo $row['project_name'];?></td>
+<td><?php echo $row['description'];?></td>
+<td><?php echo $row['add_on'];?></td>
+<td><?php echo $row['deadline'];?></td>
 <td><?php echo $row['status'];?></td>
+<td><?php echo $row['remarks'];?></td>
 </tr>
 
 
@@ -103,10 +105,6 @@ while($row=mysqli_fetch_Array($result))
 
 </div>
 <!--end section2-->
-
-
-
-
 
 </body>
 </html>

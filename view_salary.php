@@ -1,7 +1,7 @@
+
 <?php
 include('config/config.php');
-?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -11,6 +11,7 @@ include('config/config.php');
 
 
 <script src="js/bootstrap.min.js"></script>
+
 </head>
 
 <body>
@@ -56,25 +57,22 @@ include('config/config.php');
 <div class="col-md-9">
 <?php
 $con=open_connection();
-$sql="SELECT tbl_employees.id, tbl_employees.name, tbl_employees.email, tbl_employees.phone, tbl_employees.address, tbl_employees.qualification, tbl_departments.department, tbl_employees.password, tbl_employees.status
-FROM tbl_employees
-INNER JOIN tbl_departments ON tbl_employees.department_id = tbl_departments.id ";
+$sql="SELECT tbl_salary.id, tbl_employees.name, tbl_salary.bs, tbl_salary.ta, tbl_salary.pf, tbl_salary.total_salary, tbl_salary.date_from
+FROM tbl_salary
+INNER JOIN tbl_employees ON tbl_salary.employee_id = tbl_employees.id";
 $result=mysqli_query($con,$sql);
 
-
 ?>
-<h1>employee details</h1>
+<h1>salary details</h1>
 <table  class="tabl1" border="3">
 <tr>
 <th>id</th>
-<th>name</th>
-<th>email</th>
-<th>phone</th>
-<th>address</th>
-<th>qualification</th>
-<th>department_id</th>
-<th>password</th>
-<th>status</th>
+<th>employee_id</th>
+<th>bs</th>
+<th>ta</th>
+<th>pf</th>
+<th>total_salary</th>
+<th>date_from</th>
 </tr>
 
 <?php
@@ -83,13 +81,11 @@ while($row=mysqli_fetch_Array($result))
 <tr>
 <td><?php echo $row['id'];?></td>
 <td><?php echo $row['name'];?></td>
-<td><?php echo $row['email'];?></td>
-<td><?php echo $row['phone'];?></td>
-<td><?php echo $row['address'];?></td>
-<td><?php echo $row['qualification'];?></td>
-<td><?php echo $row['department'];?></td>
-<td><?php echo $row['password'];?></td>
-<td><?php echo $row['status'];?></td>
+<td><?php echo $row['bs'];?></td>
+<td><?php echo $row['ta'];?></td>
+<td><?php echo $row['pf'];?></td>
+<td><?php echo $row['total_salary'];?></td>
+<td><?php echo $row['date_from'];?></td>
 </tr>
 
 
@@ -103,10 +99,6 @@ while($row=mysqli_fetch_Array($result))
 
 </div>
 <!--end section2-->
-
-
-
-
 
 </body>
 </html>
