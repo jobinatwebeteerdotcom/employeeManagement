@@ -61,7 +61,8 @@ $con=open_connection();
 /*$sql="select * from tbl_projects"*/
 $sql1="SELECT tbl_team.id,  tbl_employees.name,tbl_team.team_name,tbl_team.status
 FROM tbl_employees
-INNER JOIN tbl_team ON tbl_team.TL_id = tbl_employees.id";
+INNER JOIN tbl_team ON tbl_team.TL_id = tbl_employees.id
+order by tbl_team.id";
 $result=mysqli_query($con,$sql1);
 
 ?>

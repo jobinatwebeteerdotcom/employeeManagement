@@ -60,7 +60,8 @@ include('config/config.php');
 $con=open_connection();
 $sql="SELECT tbl_leaves.id, tbl_employees.name, tbl_leaves.leave_date, tbl_leaves.reson, tbl_leaves.status
 FROM tbl_leaves
-INNER JOIN tbl_employees ON tbl_leaves.employee_id = tbl_employees.id";
+INNER JOIN tbl_employees ON tbl_leaves.employee_id = tbl_employees.id
+order by tbl_leaves.id";
 $result=mysqli_query($con,$sql);
 ?>
 <div class="col-md-5">

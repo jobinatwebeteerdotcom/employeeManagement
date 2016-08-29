@@ -64,7 +64,8 @@ FROM tbl_team_members
 INNER JOIN tbl_team
 ON tbl_team_members.team_id = tbl_team.id
 inner join tbl_employees
-  on tbl_employees.id=tbl_team_members.employee_id";
+  on tbl_employees.id=tbl_team_members.employee_id
+  order by tbl_team_members.id";
 $result=mysqli_query($con,$sql1);
 
 ?>
