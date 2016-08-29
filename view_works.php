@@ -60,9 +60,10 @@ include('config/config.php');
 <div class="col-md-10">
 <?php
 $con=open_connection();
-$sql="SELECT tbl_works.id, tbl_employees.name, tbl_employees.name, tbl_projects.project_name, tbl_works.description, tbl_works.add_on, tbl_works.deadline, tbl_works.status, tbl_works.remarks
+$sql="SELECT tbl_works.id, A.name,B.name, tbl_projects.project_name, tbl_works.description, tbl_works.add_on, tbl_works.deadline, tbl_works.status, tbl_works.remarks
 FROM tbl_works
-INNER JOIN tbl_employees ON tbl_works.assigned_by = tbl_employees.id 
+INNER JOIN tbl_employees A ON tbl_works.assigned_by = A.id
+INNER JOIN tbl_employees B ON tbl_works.assigned_to = B.id 
 INNER JOIN tbl_projects ON tbl_works.project_id = tbl_projects.id ";
 $result=mysqli_query($con,$sql);
 
