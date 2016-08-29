@@ -60,7 +60,11 @@ include('config/config.php');
 <div class="col-md-10">
 <?php
 $con=open_connection();
+<<<<<<< HEAD
 $sql="SELECT tbl_works.id, A.name as byname,B.name as toname, tbl_projects.project_name, tbl_works.description, tbl_works.add_on, tbl_works.deadline, tbl_works.status, tbl_works.remarks
+=======
+$sql="SELECT tbl_works.id, A.name,B.name, tbl_projects.project_name, tbl_works.description, tbl_works.add_on, tbl_works.deadline, tbl_works.status, tbl_works.remarks
+>>>>>>> 52d786090397035b53804060cf2ca3823d82b522
 FROM tbl_works
 INNER JOIN tbl_employees A ON tbl_works.assigned_by = A.id
 INNER JOIN tbl_employees B ON tbl_works.assigned_to = B.id 
