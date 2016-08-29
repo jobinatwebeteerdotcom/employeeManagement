@@ -54,6 +54,8 @@
 </nav>
 </div>
 <div class="col-md-10">
+<div class="col-md-3">
+</div>
 <?php
 $con=open_connection();
 /*$sql="select * from tbl_projects"*/
@@ -64,6 +66,8 @@ ON tbl_clients.id = tbl_projects.client_id";
 $result=mysqli_query($con,$sql1);
 
 ?>
+<div class="col-md-5">
+<H1>PROJECTS</H1>
 <table border="3" class="table-border">
 <tr>
 
@@ -93,6 +97,9 @@ while($row=mysqli_fetch_Array($result))
 }
 ?>
 </table>
+</div>
+</div>
+<div class="col-md-1">
 </div>
 
 

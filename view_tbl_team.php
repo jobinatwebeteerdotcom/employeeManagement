@@ -55,6 +55,9 @@
 </div>
 
 <div class="col-md-10">
+<div class="col-md-3">
+</div>
+
 <?php
 $con=open_connection();
 /*$sql="select * from tbl_projects"*/
@@ -65,9 +68,9 @@ order by tbl_team.id";
 $result=mysqli_query($con,$sql1);
 
 ?>
-<div class="team">
-    TEAM
-</div>
+<div class="col-md-5">
+
+<h1>TEAM</h1>
 <table border="5" class="table-border">
 <tr>
 
@@ -90,6 +93,9 @@ while($row=mysqli_fetch_Array($result))
 }
 ?>
 </table>
+</div>
+</div>
+<div class="col-md-1">
 </div>
 
 

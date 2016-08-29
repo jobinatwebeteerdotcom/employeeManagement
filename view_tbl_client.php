@@ -56,6 +56,9 @@
 </div>
 
 <div class="col-md-10">
+<div class="col-md-3">
+</div>
+
 <?php
 $con=open_connection();
 $sql="SELECT * 
@@ -63,6 +66,9 @@ FROM  `tbl_clients`";
 $result=mysqli_query($con,$sql);
 
 ?>
+<div class="col-md-5">
+
+<h1>CLIENTS</h1>
 <table border="3" class="table-border">
 <tr>
 <th>Id</th>
@@ -85,6 +91,9 @@ while($row=mysqli_fetch_Array($result))
 }
 ?>
 </table>
+</div>
+</div>
+<div class="col-md-1">
 </div>
 
 
