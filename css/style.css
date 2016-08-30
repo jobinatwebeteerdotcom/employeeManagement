@@ -26,3 +26,32 @@
     padding: 6px;
 	margin-bottom: -23px;
 }
+.add1{
+	float:right;
+}
+ .form-group{
+	  width:30%;
+	 
+ }
+ .sec3 h3{
+	 text-align:center;
+	 color:#C09;
+ }
+ .emp-form{
+	 background:#CCC;
+	 width:50%;
+	   margin-left: 260px;
+	 
+ }
+
+ .form-control{
+	   width: 200%;
+ }
+.form-group{
+	 margin-left: 118px;
+}
+button.btn.btn-default {
+    margin-left: 456px;
+    color:black;
+    background-color:#39F;
+}

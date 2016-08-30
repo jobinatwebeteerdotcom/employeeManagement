@@ -8,70 +8,31 @@ include('config/config.php');
 <title>Untitled Document</title>
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/style.css" />
-
-
 <script src="js/bootstrap.min.js"></script>
 </head>
-
 <body>
-<!--start section1-->
-<div class="container-fluid sec1">
-<div class="container sec1_head">
-<div class="col-md-12">
-<div class="col-md-7">
-</div>
-<div class="col-md-5">
-<h4>Welcome shija</h4>
-<img src="images/pic1.png" />
-<select class="option1">
-<option value="null"></option>
-<option value="logout">logout</option>
-<option value="settings">settings</option>
-</select>
-</div>
-</div>
-
-</div>
-</div>
-<!--end section1-->
-<!--start section2-->
+<?php
+include('header.php');
+?>
 <div class="container-fluid sec2">
 <div class="col-md-2">
-<nav class="navbar navbar-default">
-<ul class="nav navbar-nav nav_home">
-       <li class="active"><a href="#">Home</a></li>
-        <br />
-       <li><a href="index.php">EMPLOYEES</a></li>
-        <li><a href="view_department.php">DEPARTMENT</a></li>
-        <li><a href="view_salary.php">SALARY</a></li>
-        <li><a href="view_leaves.php">LEAVES</a></li>
-        <li><a href="view_tbl_client.php">CLIENTS</a></li>
-        <li><a href="view_tbl_projects.php">PROJECTS</a></li>
-         <li><a href="view_admin.php">ADMIN</a></li>
-        <li><a href="view_tbl_team.php">TEAMS</a></li>
-         <li><a href="view_tbl_team_members.php">TEAM MEMBERS</a></li>
-          <li><a href="view_works.php">WORKS</a></li>
-      </ul>
-   
-</nav>
+<?php
+include('sidebar.php');
+?>
 </div>
-
 <div class="col-md-10">
-<div class="col-md-3">
-</div>
 <?php
 $con=open_connection();
 $sql="SELECT tbl_employees.id, tbl_employees.name, tbl_employees.email, tbl_employees.phone, tbl_employees.address, tbl_employees.qualification, tbl_departments.department, tbl_employees.password, tbl_employees.status
 FROM tbl_employees
-INNER JOIN tbl_departments ON tbl_employees.department_id = tbl_departments.id ";
+INNER JOIN tbl_departments ON tbl_employees.department_id = tbl_departments.id  order by tbl_employees.id";
 $result=mysqli_query($con,$sql);
-
-
 ?>
-<div class="col-md-5">
-
 <h1>EMPLOYEES</h1>
-<table  class="tabl1" border="3">
+<div class="add1" >
+<a  href="add_employees.php"> add employees</a>
+</div>
+<table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
 <tr>
 <th>id</th>
 <th>name</th>
@@ -82,6 +43,8 @@ $result=mysqli_query($con,$sql);
 <th>department_id</th>
 <th>password</th>
 <th>status</th>
+<th>edit</th>
+<th>delete</th>
 </tr>
 
 <?php
@@ -97,21 +60,14 @@ while($row=mysqli_fetch_Array($result))
 <td><?php echo $row['department'];?></td>
 <td><?php echo $row['password'];?></td>
 <td><?php echo $row['status'];?></td>
+<td><a href="#">edit</a></td>
+<td><a href="delete_employee.php?eid=<?php echo $row['id'];?> ">delete</a></td>
 </tr>
-
-
-
-
 <?php }?>
-
 </table>
 </div>
-<div class="col-md-2">
-</div>
 </div>
 
-
-</div>
 <!--end section2-->
 
 
