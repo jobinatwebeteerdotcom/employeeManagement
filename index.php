@@ -1,19 +1,21 @@
 <?php
 include('config/config.php');
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Untitled Document</title>
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/style.css" />
 <script src="js/bootstrap.min.js"></script>
 </head>
 <body>
+<!-- start section1-->
 <?php
 include('header.php');
 ?>
+<!-- end section1-->
+
+<!-- start section2 -->
 <div class="container-fluid sec2">
 <div class="col-md-2">
 <?php
@@ -60,14 +62,13 @@ while($row=mysqli_fetch_Array($result))
 <td><?php echo $row['department'];?></td>
 <td><?php echo $row['password'];?></td>
 <td><?php echo $row['status'];?></td>
-<td><a href="#">edit</a></td>
+<td><a href="edit_employee.php?id=<?php echo $row['id'];?>">edit</a></td>
 <td><a href="delete_employee.php?eid=<?php echo $row['id'];?> ">delete</a></td>
 </tr>
 <?php }?>
 </table>
 </div>
 </div>
-
 <!--end section2-->
 
 

@@ -5,16 +5,11 @@
 <title>Untitled Document</title>
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/style.css" />
-
-
 <script src="js/bootstrap.min.js"></script>
 </head>
 <body>
-
 <!--start section1-->
 <div class="container-fluid sec1">
-
-<div class="col-md-12">
 <div class="col-md-7">
 </div>
 <div class="col-md-5">
@@ -27,10 +22,6 @@
 </select>
 </div>
 </div>
-
-</div>
-
-
 <!--end section1-->
 </body>
 </html>
